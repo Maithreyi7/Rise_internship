@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWS EC2 Deployment Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="fade-in">
+    <h1>🚀 AWS EC2 Deployment Guide</h1>
+    <p>Host Your First Website with Apache on a Linux Server</p>
+  </header>
+
+  <main class="container">
+    <section class="card slide-in">
+      <h2>🔍 Objective</h2>
+      <p>To launch an EC2 instance, configure a web server, and deploy a modern HTML/CSS site publicly.</p>
+    </section>
+
+    <section class="card slide-in delay-1">
+      <h2>⚙️ Technologies Used</h2>
+      <ul>
+        <li>Amazon EC2 (Ubuntu Linux)</li>
+        <li>Apache Web Server</li>
+        <li>SSH & SCP</li>
+        <li>HTML5 & CSS3</li>
+      </ul>
+    </section>
+
+    <section class="card slide-in delay-2">
+      <h2>🪜 Step-by-Step Deployment</h2>
+      <ol>
+        <li><strong>Login to AWS Console</strong> and launch an Ubuntu EC2 instance.</li>
+        <li><strong>Download the PEM file</strong> (e.g., <code>Trip_Agency.pem</code>).</li>
+        <li><strong>Open Git Bash or PowerShell</strong> and connect to the instance:
+          <code>ssh -i Trip_Agency.pem ubuntu@your-ip</code></li>
+        <li><strong>Install Apache Web Server:</strong>
+          <code>sudo apt update && sudo apt install apache2 -y</code></li>
+        <li><strong>Upload Website Files:</strong>
+          <code>scp -i Trip_Agency.pem -r * ubuntu@your-ip:/tmp</code></li>
+        <li><strong>Move files to web root:</strong>
+          <code>
+            sudo rm -rf /var/www/html/*<br>
+            sudo cp -r /tmp/* /var/www/html/
+          </code>
+        </li>
+        <li><strong>Restart Apache:</strong>
+          <code>sudo systemctl restart apache2</code>
+        </li>
+        <li><strong>Access your site:</strong> 
+          <a href="http://13.51.72.159" target="_blank">http://13.51.72.159</a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="card slide-in delay-3">
+      <h2>🎉 Result</h2>
+      <p>Your website is now live and hosted on the cloud using AWS EC2!</p>
+    </section>
+  </main>
+
+  <footer class="fade-in delay-4">
+    <p>Made with ❤️ by Maithreyi</p>
+  </footer>
+</body>
+</html>
