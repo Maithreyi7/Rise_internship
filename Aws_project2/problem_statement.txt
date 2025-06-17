@@ -1,0 +1,39 @@
+🚀 Project Title: LightningSite — Static Hosting with AWS S3 & CloudFront
+✅ Problem Statement
+Many websites face latency and downtime due to localized or shared hosting. This impacts user experience and SEO.
+
+🎯 Objective
+Host a fully static website (HTML, CSS, JS) using:
+
+Amazon S3 for storage
+
+Amazon CloudFront for global content delivery
+
+📦 Requirements
+AWS Account
+
+Static Website Files (index.html, style.css, script.js, etc.)
+
+IAM user with S3 & CloudFront permissions
+
+🛠️ Step-by-Step Setup
+1️⃣ Create & Configure an S3 Bucket
+Go to S3 Console
+
+Click “Create Bucket”
+
+Name: your-site-name.com
+
+Disable “Block all public access”
+
+Upload your site files (index.html, style.css, etc.)
+
+Enable static website hosting:
+
+Go to Properties > Static website hosting
+
+Choose: Enable
+
+Index document: index.html
+
+Error document: error.html (optional)

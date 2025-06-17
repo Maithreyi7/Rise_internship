@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Static Website Hosting with S3 & CloudFront</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #040402;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #232f3e;
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 2rem 10%;
+    }
+
+    h2 {
+      color: #2d3748;
+    }
+
+    .card {
+      background: rgb(254, 216, 216);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .flow-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .flow-step {
+      background-color: #9de095;
+      border-left: 5px solid #3182ce;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #1a202c;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .diagram {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .diagram img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚀 Host Static Website with S3 & CloudFront</h1>
+    <p>Fast, Global, Serverless Hosting on AWS</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>🧠 Problem Statement</h2>
+      <p>Websites often face slow speeds and limited uptime due to localized or shared hosting. This leads to poor user experience and SEO issues.</p>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Objective</h2>
+      <p>Use Amazon S3 to host static files and CloudFront CDN to deliver them globally — ensuring low latency and high availability.</p>
+    </div>
+
+    <div class="card">
+      <h2>🛠️ Solution Flow</h2>
+      <div class="flow-chart">
+        <div class="flow-step">📂 Upload static website (HTML/CSS/JS) to Amazon S3</div>
+        <div class="flow-step">⚙️ Configure S3 bucket for static website hosting</div>
+        <div class="flow-step">🔓 Make the bucket content publicly readable via bucket policy</div>
+        <div class="flow-step">🌐 Create a CloudFront Distribution using the S3 website endpoint as origin</div>
+        <div class="flow-step">🔁 CloudFront caches and delivers content from edge locations</div>
+        <div class="flow-step">📡 (Optional) Point your custom domain to CloudFront via Route 53</div>
+      </div>
+    </div>
+
+    <div class="card">
+  <h2>🚀 Explore Project 1</h2>
+  <p>Want to see more of what we're building? Check out our first project in the Cloud Computing Series!</p>
+  <a href="https://github.com/Maithreyi7/Rise_internship/tree/main/Aws_project1" target="_blank" style="display:inline-block; padding:10px 20px; background-color:#24292e; color:#fff; text-decoration:none; border-radius:5px;">
+    🌐 View on GitHub
+  </a>
+</div>
+
+
+    <div class="card">
+      <h2>✅ Expected Outcome</h2>
+      <ul>
+        <li>⚡ Fast website load time from any part of the world</li>
+        <li>🧭 Highly available and reliable infrastructure</li>
+        <li>🔒 HTTPS support with CloudFront and ACM</li>
+        <li>💸 Extremely cost-effective for personal & portfolio sites</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Aws_project2 | Built with AWS 💻|by Maithreyi Adluri</p>
+  </footer>
+
+</body>
+</html>
