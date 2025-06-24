@@ -1,0 +1,51 @@
+# 🚀 RISEN – Dialogflow Chatbot Project
+
+## 📌 Problem Statement
+Customer service demands 24/7 availability and instant responses, which is hard to scale manually.  
+This project solves that using an intelligent chatbot.
+
+## 🎯 Objective
+To create and deploy a Dialogflow chatbot for basic customer interaction, embedded on a website for live user assistance.
+
+## 🧰 Requirements
+- Google Dialogflow ES account
+- Training Intents and Entities
+- Simple website (HTML/CSS)
+- Integration via Dialogflow Messenger
+
+## 🛠️ Step-by-Step Process
+
+1. **Create a Dialogflow Agent**  
+   Go to [Dialogflow Console](https://dialogflow.cloud.google.com), and set up a new agent with language and timezone.
+
+2. **Design Intents**  
+   Add intents like `Welcome`, `FAQs`, `Pricing`, `Support` etc., with training phrases and responses.
+
+3. **Use Entities**  
+   Create custom or use system entities like `@sys.date`, `@sys.geo-city`, `@product_type`.
+
+4. **Enable Dialogflow Messenger**  
+   Go to the *Integrations* tab in Dialogflow and toggle **Dialogflow Messenger** ON.
+
+5. **Copy & Embed the iframe**  
+   Copy the given `<df-messenger>` code and paste it into your HTML page.
+
+6. **Test & Deploy**  
+   Host your HTML file using Netlify, GitHub Pages, or any static web server.
+
+## ✅ Expected Outcome
+A working chatbot named **RISEN** (Responsive Intelligent Support Engine Now)  
+that responds to customer queries instantly via natural conversation.
+
+## 🌐 Live Demo
+[Replace this with your live URL]
+
+## 🔍 Key Learnings
+- Designing intents and handling conversational flows
+- Using Dialogflow Messenger for quick integration
+- Fixing `agent-id` & `401` authentication errors
+- Deploying simple HTML apps with embedded AI
+
+---
+
+👨‍💻 Built as part of the **#RiseInternship** 
